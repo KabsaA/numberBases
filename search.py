@@ -16,9 +16,16 @@ def linear_search_iterative(array, item):
     return None  # not found
 
 
-def linear_search_recursive(array, item, index=0):
-    # TODO: implement linear search recursively here
-    pass
+def linear_search_recursive(array, item, index): 
+    if index < len(array):
+        if array[index] == item:
+            return index
+        else:
+            return linear_search_recursive(array, item, index+1)
+    else: 
+
+        return None
+print(linear_search_recursive([1,2,3,6,9],6,0))
     # once implemented, change linear_search to call linear_search_recursive
     # to verify that your recursive implementation passes all tests
 
